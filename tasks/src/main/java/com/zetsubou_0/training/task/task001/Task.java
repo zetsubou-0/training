@@ -1,7 +1,14 @@
 package com.zetsubou_0.training.task.task001;
 
 /**
- * Created by zetsubou_0 on 07.03.16.
+ * Написать тело метода isPositive, которое принимает число типа int
+ * и возвращает  - true, если число положительное
+ * false - в остальных случаях
+ * 0 - считать положительным
  */
 public class Task {
+
+    public boolean isPositive(final int number) {
+        return false;
+    }
 }
