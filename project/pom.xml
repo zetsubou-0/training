@@ -11,6 +11,14 @@
 
     <modules>
         <module>tasks</module>
+        <module>tests</module>
+        <module>trainees/andrei_halaev</module>
+        <module>trainees/andrei_malyushkin</module>
+        <module>trainees/kiryl_lutsyk</module>
+        <module>trainees/sergei_timoshenko</module>
+        <module>trainees/vadim_martinenko</module>
+        <module>trainees/valentin_pshenichnik</module>
+        <module>trainees/vitalii_nikolaenko</module>
     </modules>
 
 </project>
