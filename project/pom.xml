@@ -9,4 +9,8 @@
     <name>project</name>
     <url>http://maven.apache.org</url>
 
+    <modules>
+        <module>tasks</module>
+    </modules>
+
 </project>
