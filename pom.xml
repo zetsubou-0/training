@@ -12,4 +12,16 @@
     <name>Training</name>
     <description>Java training</description>
 
+    <modules>
+        <module>tasks/training.tasks</module>
+        <module>tests/training.tests</module>
+        <module>trainees/andrei_halaev/andrei_halaev</module>
+        <module>trainees/andrei_malyushkin/andrei_malyushkin</module>
+        <module>trainees/kiryl_lutsyk/kiryl_lutsyk</module>
+        <module>trainees/sergei_timoshenko/sergei_timoshenko</module>
+        <module>trainees/vadim_martinenko/vadim_martinenko</module>
+        <module>trainees/valentin_pshenichnik/valentin_pshenichnik</module>
+        <module>trainees/vitalii_nikolaenko/vitalii_nikolaenko</module>
+    </modules>
+
 </project>
