@@ -1,7 +1,7 @@
 package com.zetsubou_0.training.test.task002;
 
-import com.zetsubou_0.training.test.util.BaseTest;
 import com.zetsubou_0.training.task.task002.Task;
+import com.zetsubou_0.training.test.util.BaseTest;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
