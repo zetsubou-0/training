@@ -27,11 +27,8 @@ public class TestSynchronizer implements Synchronizer, Runnable {
 
     private List<String> getTraineesList(final File traineesRoot) {
         List<String> traineesList = new ArrayList<>();
-        File[] directories = traineesRoot.listFiles(new FileFilter() {
-            @Override
-            public boolean accept(File file) {
-                return file.isDirectory();
-            }
+        File[] directories = traineesRoot.listFiles(file -> {
+            return file.isDirectory();
         });
         for (File directory : directories) {
             String name = directory.getName();
