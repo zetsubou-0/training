@@ -3,7 +3,6 @@ package com.zetsubou_0.training.test.util.synchronizer;
 import com.zetsubou_0.training.test.util.synchronizer.api.Synchronizer;
 
 import java.io.File;
-import java.io.FileFilter;
 import java.util.ArrayList;
 import java.util.List;
 
