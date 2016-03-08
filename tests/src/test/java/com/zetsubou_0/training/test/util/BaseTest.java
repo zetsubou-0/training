@@ -8,4 +8,8 @@ public class BaseTest<T> {
             throws IllegalAccessException, InstantiationException {
         sut = testClass.newInstance();
     }
+
+    public void init() throws IllegalAccessException, InstantiationException {
+        // implement
+    }
 }
