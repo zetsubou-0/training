@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zetsubou_0</groupId>
-    <artifactId>training</artifactId>
+    <artifactId>training.project</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>training</name>
+    <name>project</name>
     <url>http://maven.apache.org</url>
 
 </project>
