@@ -5,12 +5,9 @@ import com.zetsubou_0.training.test.util.BaseTest;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static com.zetsubou_0.training.test.util.TestConstant.Test002.*;
 
 public class TaskTest extends BaseTest<Task> {
-
-    private static final String ZERO_VALUE = "Function doesn't return \"zero\" for 0";
-    private static final String SHOULD_BE_POSITIVE = "Function doesn't return \"positive\" for positive value";
-    private static final String SHOULD_BE_NEGATIVE = "Function doesn't return \"negative\" for negative value";
 
     @Test
     public void shouldGetPositive() {
