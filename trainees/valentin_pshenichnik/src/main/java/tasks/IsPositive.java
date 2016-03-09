@@ -7,9 +7,10 @@ import com.zetsubou_0.training.task.task001.Task;
  */
 public class IsPositive  implements Task{
     public boolean isPositive(int number) {
-        if (number>=0){
+        /*if (number>=0){
             return true;
         }else{
-        return false;}
+        return false;}*/
+        return number>=0;
     }
 }
