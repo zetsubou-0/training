@@ -13,4 +13,8 @@ public class TestConstant {
         public static final String SHOULD_BE_POSITIVE = "Метод не возвращает \"positive\" для положительного значения";
         public static final String SHOULD_BE_NEGATIVE = "Метод не возвращает \"negative\" для отрицательного значения";
     }
+
+    public static class Test004 {
+        public static final String UNEXPECTED_ARRAY = "Возвращается не верный мыссив. Массив должен содержать числа Фибонфччи.";
+    }
 }
