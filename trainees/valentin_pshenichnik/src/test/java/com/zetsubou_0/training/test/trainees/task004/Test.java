@@ -6,6 +6,6 @@ public class Test extends TaskTest {
 
     @Override
     public void init() throws IllegalAccessException, InstantiationException {
-//        setupClass(MyClass.class);
+//        setupClass(Fibonnaci.class);
     }
 }
