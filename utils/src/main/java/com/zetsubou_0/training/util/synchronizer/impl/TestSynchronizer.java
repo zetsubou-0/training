@@ -139,7 +139,8 @@ public class TestSynchronizer implements Synchronizer {
 
     private List<String> testList() {
         return new ArrayList<String>() {{
-           add("kiryl_lutsyk");
+//           add("kiryl_lutsyk");
+           add("valentin_pshenichnik");
         }};
     }
 }
