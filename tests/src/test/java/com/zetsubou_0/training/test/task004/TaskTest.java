@@ -4,6 +4,7 @@ import com.zetsubou_0.training.task.task004.Task;
 import com.zetsubou_0.training.test.util.BaseTest;
 import com.zetsubou_0.training.test.util.TestConstant;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class TaskTest extends BaseTest<Task> {
@@ -15,6 +16,11 @@ public class TaskTest extends BaseTest<Task> {
             {13, 21, 34, 55},
             {89, 144, 233, 377, 610}
     };
+
+    @Before
+    public void setup() throws InstantiationException, IllegalAccessException {
+        init();
+    }
 
     @Test
     public void shouldReturnFifthLevelArray() {
