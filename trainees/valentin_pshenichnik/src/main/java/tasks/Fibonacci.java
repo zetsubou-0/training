@@ -8,6 +8,9 @@ import com.zetsubou_0.training.task.task004.Task;
 public class Fibonacci implements Task {
     public int[][] fibonacciArray(int columnsCount) {
         int fibonacci[][] = new int[columnsCount][];
+        for (int i = 0; i <columnsCount ; i++) {
+            fibonacci[i] = new int[i+1];
+        }
         int summaFibonacci;
         int a = 1;
         int b = 1;
