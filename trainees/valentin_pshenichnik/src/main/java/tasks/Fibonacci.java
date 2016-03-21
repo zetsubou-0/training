@@ -25,7 +25,6 @@ public class Fibonacci implements Task {
                     fibonacci[i][j] = summaFibonacci;
                 }
             }
-
         }
         return fibonacci;
     }
