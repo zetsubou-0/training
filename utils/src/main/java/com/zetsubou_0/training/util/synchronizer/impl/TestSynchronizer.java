@@ -46,6 +46,7 @@ public class TestSynchronizer implements Synchronizer {
                 new UsernamePasswordCredentialsProvider(credentials.getName(), credentials.getPassword());
         try {
             git.lsRemote()
+                    .setRemote("refs/origin/master")
                     .setCredentialsProvider(credentialsProvider)
                     .call();
         } catch (GitAPIException e) {
