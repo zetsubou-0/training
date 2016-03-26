@@ -23,6 +23,7 @@ public class TaskTest extends BaseTest<Task> {
         Assert.assertArrayEquals(TestConstant.Test004.UNEXPECTED_ARRAY, EXPECTED_RESULT, result);
     }
 
+    @Test
     public void shouldReturnNull() {
         int[][] result = sut.fibonacciArray(2);
         Assert.assertNull(result);
