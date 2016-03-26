@@ -49,8 +49,15 @@ public class TestSynchronizer implements Synchronizer {
         this.credentials = credentials;
         this.testNumber = testNumber;
         Repository repository = new FileRepositoryBuilder()
+//                .setGitDir(new File(GIT_DIRECTORY))
+//                .readEnvironment()
+//                .findGitDir()
+//                .setup()
+//                .build();
                 .setMustExist(true)
                 .setWorkTree(new File(GIT_DIRECTORY))
+                .findGitDir()
+                .setup()
                 .build();
         repository.getConfig().fromText(CONFIGURATION);
         git = new Git(repository);
@@ -72,7 +79,7 @@ public class TestSynchronizer implements Synchronizer {
 
     private void addTestToGit(final String path) throws GitAPIException {
         git.pull().call();
-        git.add().addFilepattern("../" + path + "/.").call();
+        git.add().addFilepattern(path + "/Test.java").call();
         git.commit().setMessage(String.format(TEST_MESSAGE, testNumber)).call();
         CredentialsProvider credentialsProvider =
                 new UsernamePasswordCredentialsProvider(credentials.getName(), credentials.getPassword());
