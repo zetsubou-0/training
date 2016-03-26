@@ -10,11 +10,6 @@ import static com.zetsubou_0.training.test.util.TestConstant.Test001.*;
 
 public class TaskTest extends BaseTest<Task> {
 
-    @Before
-    public void setup() throws InstantiationException, IllegalAccessException {
-        init();
-    }
-
     @Test
     public void shouldGetPositive() {
         assertTrue(SHOULD_BE_POSITIVE, sut.isPositive(123));

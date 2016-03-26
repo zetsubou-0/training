@@ -17,11 +17,6 @@ public class TaskTest extends BaseTest<Task> {
             {89, 144, 233, 377, 610}
     };
 
-    @Before
-    public void setup() throws InstantiationException, IllegalAccessException {
-        init();
-    }
-
     @Test
     public void shouldReturnFifthLevelArray() {
         int[][] result = sut.fibonacciArray(5);
