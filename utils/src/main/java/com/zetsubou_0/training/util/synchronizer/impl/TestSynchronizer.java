@@ -32,7 +32,7 @@ public class TestSynchronizer implements Synchronizer {
     private static final String TRAINEES_MAIN_PATH = "src/test/java";
     private static final String TRAINEES_PACAGE = "com/zetsubou_0/training/test/trainees";
     private static final String TASK = "task%03d";
-    private static final String TEST_MESSAGE = "Tests for %d task was added";
+    private static final String TEST_MESSAGE = "Test for %d task was added";
     private static final String DIRECTORY_PERMISSIONS = "rwxr-x---";
     private static final String TRAINEES_REGEX = "[a-zA-Z]+_[a-zA-Z]+";
     private static final String GIT_DIRECTORY = "./";
