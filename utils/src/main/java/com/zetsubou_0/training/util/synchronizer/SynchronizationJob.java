@@ -4,6 +4,7 @@ import com.zetsubou_0.training.util.synchronizer.api.Synchronizer;
 import com.zetsubou_0.training.util.synchronizer.bean.Credentials;
 import com.zetsubou_0.training.util.synchronizer.impl.TestSynchronizer;
 import org.apache.commons.lang3.StringUtils;
+import org.eclipse.jgit.errors.ConfigInvalidException;
 
 import java.io.IOException;
 
@@ -23,7 +24,7 @@ public class SynchronizationJob {
         try {
             Synchronizer synchronizer = new TestSynchronizer(geiCredentials, task);
             synchronizer.synchronize();
-        } catch (IOException e) {
+        } catch (IOException | ConfigInvalidException e) {
             // todo: logger should be added
             e.printStackTrace();
         }

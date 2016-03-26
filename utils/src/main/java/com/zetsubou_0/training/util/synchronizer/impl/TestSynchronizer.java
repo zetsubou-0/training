@@ -4,6 +4,7 @@ import com.zetsubou_0.training.util.synchronizer.api.Synchronizer;
 import com.zetsubou_0.training.util.synchronizer.bean.Credentials;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
+import org.eclipse.jgit.errors.ConfigInvalidException;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 import org.eclipse.jgit.transport.CredentialsProvider;
@@ -34,25 +35,25 @@ public class TestSynchronizer implements Synchronizer {
     private static final String TEST_MESSAGE = "Tests for %d task was added";
     private static final String DIRECTORY_PERMISSIONS = "rwxr-x---";
     private static final String TRAINEES_REGEX = "[a-zA-Z]+_[a-zA-Z]+";
+    private static final String GIT_DIRECTORY = "./";
+    private static final String CONFIGURATION = "[remote \"origin\"]\n"
+            + "url = https://github.com/zetsubou-0/training.git\n"
+            + "fetch = +refs/heads/*:refs/remotes/origin/*\n";
 
+    private final Credentials credentials;
     private final int testNumber;
     private Git git;
 
-    public TestSynchronizer(final Credentials credentials, final int testNumber) throws IOException {
+    public TestSynchronizer(final Credentials credentials, final int testNumber)
+            throws IOException, ConfigInvalidException {
+        this.credentials = credentials;
         this.testNumber = testNumber;
-        Repository repository = new FileRepositoryBuilder().setGitDir(new File(".git")).build();
+        Repository repository = new FileRepositoryBuilder()
+                .setMustExist(true)
+                .setWorkTree(new File(GIT_DIRECTORY))
+                .build();
+        repository.getConfig().fromText(CONFIGURATION);
         git = new Git(repository);
-        CredentialsProvider credentialsProvider =
-                new UsernamePasswordCredentialsProvider(credentials.getName(), credentials.getPassword());
-        try {
-            git.lsRemote()
-                    .setRemote("refs/origin/master")
-                    .setCredentialsProvider(credentialsProvider)
-                    .call();
-        } catch (GitAPIException e) {
-            // todo: logger
-            e.printStackTrace();
-        }
     }
 
     public void synchronize() throws IOException {
@@ -71,9 +72,11 @@ public class TestSynchronizer implements Synchronizer {
 
     private void addTestToGit(final String path) throws GitAPIException {
         git.pull().call();
-        git.add().addFilepattern("../" + path).call();
+        git.add().addFilepattern("../" + path + "/.").call();
         git.commit().setMessage(String.format(TEST_MESSAGE, testNumber)).call();
-        git.push().call();
+        CredentialsProvider credentialsProvider =
+                new UsernamePasswordCredentialsProvider(credentials.getName(), credentials.getPassword());
+        git.push().setCredentialsProvider(credentialsProvider).call();
     }
 
     private void createJavaTest(final int testNumber, final String path) throws IOException {
