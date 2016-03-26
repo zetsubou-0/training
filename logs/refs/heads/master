@@ -1,0 +1,13 @@
+0000000000000000000000000000000000000000 38172390875cc290c38c34eb8bc11aa99f6eb400 zetsubou_0 <zetsubou_0@zetsubou.(none)> 1458248281 +0300	clone: from https://github.com/zetsubou-0/training.git
+38172390875cc290c38c34eb8bc11aa99f6eb400 d21545d7c568e95b1791e3b0809e1200cbc7a3ab zetsubou-0 <zetsubou.zero.0@gmail.com> 1458408961 +0300	commit: create synchronization job
+d21545d7c568e95b1791e3b0809e1200cbc7a3ab b61609292c4cc90577168dda243984ff60f8987b zetsubou-0 <zetsubou.zero.0@gmail.com> 1458492834 +0300	commit: valik test 4
+b61609292c4cc90577168dda243984ff60f8987b c7b617388e3b4701e5e2bcf4c22c9ad71085ac2f zetsubou-0 <zetsubou.zero.0@gmail.com> 1458493172 +0300	merge origin/master: Fast-forward
+c7b617388e3b4701e5e2bcf4c22c9ad71085ac2f 8687d520bf87641e14ddc26554ebadfc805b84e9 zetsubou-0 <zetsubou.zero.0@gmail.com> 1458493780 +0300	merge origin/master: Fast-forward
+8687d520bf87641e14ddc26554ebadfc805b84e9 66b809f7e993f4612a5d04b08a5328ad7521b3ca zetsubou-0 <zetsubou.zero.0@gmail.com> 1458493787 +0300	commit: valik test 4
+66b809f7e993f4612a5d04b08a5328ad7521b3ca ae446e05c4f903878b6a35b0b0bd228650ea061f zetsubou-0 <zetsubou.zero.0@gmail.com> 1458544330 +0300	merge origin/master: Fast-forward
+ae446e05c4f903878b6a35b0b0bd228650ea061f 75b74a9b6b161ff8967328ff6e22228de5703c1c zetsubou-0 <zetsubou.zero.0@gmail.com> 1458586679 +0300	merge origin/master: Fast-forward
+75b74a9b6b161ff8967328ff6e22228de5703c1c bd650df3e054724b8a51551576cb7b68b33941de zetsubou-0 <zetsubou.zero.0@gmail.com> 1458587702 +0300	commit: kiryl test 4
+bd650df3e054724b8a51551576cb7b68b33941de eab5e7c7c3aac93688500b6907d2058a54a56c01 zetsubou-0 <zetsubou.zero.0@gmail.com> 1458844066 +0300	commit: Tests for 4 task was added
+eab5e7c7c3aac93688500b6907d2058a54a56c01 0e4a880f4f604587aa2e2c3bfd675637f028dc13 zetsubou-0 <zetsubou.zero.0@gmail.com> 1458845077 +0300	commit: update synchronization job
+0e4a880f4f604587aa2e2c3bfd675637f028dc13 4a0122b31860478230fbd8bd6f667091a0fe4ab9 zetsubou-0 <zetsubou.zero.0@gmail.com> 1458987284 +0300	merge origin/master: Fast-forward
+4a0122b31860478230fbd8bd6f667091a0fe4ab9 4a94108d9bb1cff9446b9498b9ecff921e5681f7 zetsubou-0 <zetsubou.zero.0@gmail.com> 1458987312 +0300	commit: remove ui
