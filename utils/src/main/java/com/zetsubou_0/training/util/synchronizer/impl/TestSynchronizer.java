@@ -49,11 +49,6 @@ public class TestSynchronizer implements Synchronizer {
         this.credentials = credentials;
         this.testNumber = testNumber;
         Repository repository = new FileRepositoryBuilder()
-//                .setGitDir(new File(GIT_DIRECTORY))
-//                .readEnvironment()
-//                .findGitDir()
-//                .setup()
-//                .build();
                 .setMustExist(true)
                 .setWorkTree(new File(GIT_DIRECTORY))
                 .findGitDir()
@@ -145,12 +140,6 @@ public class TestSynchronizer implements Synchronizer {
                 traineesList.add(name);
             }
         });
-        return testList();
-    }
-
-    private List<String> testList() {
-        return new ArrayList<String>() {{
-           add("kiryl_lutsyk");
-        }};
+        return traineesList;
     }
 }
