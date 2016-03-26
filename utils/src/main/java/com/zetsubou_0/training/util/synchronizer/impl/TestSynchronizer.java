@@ -71,7 +71,7 @@ public class TestSynchronizer implements Synchronizer {
 
     private void addTestToGit(final String path) throws GitAPIException {
         git.pull().call();
-        git.add().addFilepattern(path).call();
+        git.add().addFilepattern("../" + path).call();
         git.commit().setMessage(String.format(TEST_MESSAGE, testNumber)).call();
         git.push().call();
     }
