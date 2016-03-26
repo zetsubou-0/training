@@ -8,6 +8,9 @@ import com.zetsubou_0.training.task.task004.Task;
 public class Fibonacchi implements Task {
 
     public int[][] fibonacciArray(final int columnsCount) {
+        if (columnsCount <= 2) {
+            return null;
+        }
         int[][] result = new int[columnsCount][];
         int previous = 1;
         int next = 0;
