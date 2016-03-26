@@ -58,24 +58,23 @@ public class TestSynchronizer implements Synchronizer {
         git = new Git(repository);
     }
 
-    public void synchronize() throws IOException {
+    public void synchronize() throws Exception {
         List<String> traineesList = getTraineesList();
         for(String trainees : traineesList) {
             String path = createTraineesTestPath(testNumber, trainees);
             createJavaTest(testNumber, path);
-            try {
-                addTestToGit(path);
-            } catch (GitAPIException e) {
-                // todo: logger
-                e.printStackTrace();
-            }
+            addTestToGit(path);
         }
+        pushCommits();
     }
 
     private void addTestToGit(final String path) throws GitAPIException {
         git.pull().call();
         git.add().addFilepattern(path + "/Test.java").call();
         git.commit().setMessage(String.format(TEST_MESSAGE, testNumber)).call();
+    }
+
+    private void pushCommits() throws GitAPIException {
         CredentialsProvider credentialsProvider =
                 new UsernamePasswordCredentialsProvider(credentials.getName(), credentials.getPassword());
         git.push().setCredentialsProvider(credentialsProvider).call();
