@@ -7,6 +7,7 @@ import com.zetsubou_0.training.task.task006.Task;
  */
 public class SortArray implements Task {
     public int[] ascendingSort(int[] array) {
+
         return new int[0];
     }
 
