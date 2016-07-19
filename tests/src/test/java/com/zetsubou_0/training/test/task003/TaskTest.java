@@ -27,12 +27,15 @@ public class TaskTest extends BaseTest<Task> {
 
     @Test
     public void shouldPrintSequence() {
-        sut.printSequence(-2, 2);
+        int start = -2;
+        int stop = 2;
+        sut.printSequence(start, stop);
 
         verify(out).println(-2);
         verify(out).println(-1);
         verify(out).println(0);
         verify(out).println(1);
         verify(out).println(2);
+        verify(out, times(stop - start + 1)).println(anyInt());
     }
 }
