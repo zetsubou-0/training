@@ -17,9 +17,9 @@ public class SynchronizationJob {
         if (task != 0 && StringUtils.isBlank(name) && StringUtils.isBlank(password)) {
             return;
         }
-        Credentials geiCredentials = new Credentials(name, password);
+        Credentials credentials = new Credentials(name, password);
         try {
-            Synchronizer synchronizer = new TestSynchronizer(geiCredentials, task);
+            Synchronizer synchronizer = new TestSynchronizer(credentials, task);
             synchronizer.synchronize();
         } catch (Exception e) {
             // todo: logger should be added
