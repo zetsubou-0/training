@@ -19,6 +19,6 @@ public class SortArray implements Task {
         for (int i = 0; i <array.length ; i++) {
             arrayNew[i] = array[array.length - i];
         }
-        return new int[0];
+        return arrayNew;
     }
 }

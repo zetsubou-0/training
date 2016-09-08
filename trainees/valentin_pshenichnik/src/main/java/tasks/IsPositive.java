@@ -12,5 +12,6 @@ public class IsPositive  implements Task{
         }else{
         return false;}*/
         return number>=0;
+        
     }
 }
