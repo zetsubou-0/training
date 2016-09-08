@@ -47,6 +47,13 @@ public class Collection implements Task {
 
     @Override
     public Map<AnimalType, SortedSet<Animal>> sortAnimals(List<Animal> animals) {
-        return null;
+        SortedSet<Animal> set = new TreeSet<>();
+        Map<AnimalType, SortedSet<Animal>> map = new HashMap<>();
+        for (Animal animal: animals) {
+            set.add(animal);
+            map.put(animal.getType(),set);
+        }
+
+        return map;
     }
 }
